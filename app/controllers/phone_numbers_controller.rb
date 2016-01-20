@@ -6,7 +6,7 @@ class PhoneNumbersController < ApplicationController
   end
 
   def get_related_resources
-    @source = Object.const_get(params[:source].singularize.capitalize)
+    @source = Object.const_get(params[:source].classify)
     # @relationship = params[:relationship]
     @phones = @source.find_by_id(params[:contact_id]).phone_numbers
     # binding.pry
