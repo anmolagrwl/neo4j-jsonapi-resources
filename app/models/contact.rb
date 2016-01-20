@@ -6,7 +6,7 @@ class Contact
   property :email
   property :twitter
 
-  has_many :out, :phone_numbers, type: :has_phone
+  has_many :out, :phone_numbers, type: 'HAS_PHONE'
 
   ### Validations
   # validates :name_first, presence: true

@@ -7,4 +7,14 @@ class ContactsController < ApplicationController
     render json: @result
   end
 
+  def show
+    @id = params[:id]
+    @result = Contact.find_by_id(@id)
+    render json: @result
+  end
+
+  def get_related_resources
+    binding.pry
+  end
+
 end

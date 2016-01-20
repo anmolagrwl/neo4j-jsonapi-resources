@@ -4,5 +4,5 @@ class PhoneNumber
   property :name
   property :phone_number
 
-  has_one :in, :contact, type: :has_phone
+  has_one :in, :contact, type: 'HAS_PHONE'
 end
