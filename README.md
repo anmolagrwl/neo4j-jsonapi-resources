@@ -96,7 +96,8 @@ Open these links:
     }
   }
   ```
-  3. Get all the relationships between a particular contact and phone number
+  
+3. Get all the relationships between a particular contact and phone number
   
   Request - `http://localhost:3000/contacts/57461821-2819-4f77-9054-d464a014d3a2/relationships/phone-numbers`
 
@@ -138,7 +139,7 @@ Open these links:
   ]
   ```
   
-  4. Get all the phone numbers of a particular contact
+4. Get all the phone numbers of a particular contact
   
   Request - `http://localhost:3000/contacts/57461821-2819-4f77-9054-d464a014d3a2/phone-numbers`
 
