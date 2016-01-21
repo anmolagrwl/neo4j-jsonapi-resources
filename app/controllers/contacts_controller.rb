@@ -13,8 +13,21 @@ class ContactsController < ApplicationController
     render json: @result
   end
 
-  def get_related_resources
+  def get_related_resource
     binding.pry
+    @source = params[:source].classify.constantize
+    # @relationship = params[:relationship]
+    @contact = @source.find_by_id(params[:phone_number_id]).contact
+    # binding.pry
+    render json: @contact
+  end
+
+  def show_relationship
+    # binding.pry
+    @source = params[:controller].classify.constantize
+    @relationships = @source.find_by_id(params[:contact_id]).rels
+    render json: @relationships
+    # binding.pry
   end
 
 end
