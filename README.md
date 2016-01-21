@@ -35,7 +35,9 @@ In terminal/command prompt, enter `rails s`
 
 Open these links:
 
-1. Request - `http://localhost:3000/contacts`
+1. Get all contacts
+
+  Request - `http://localhost:3000/contacts`
 
   Response -
 
@@ -65,7 +67,9 @@ Open these links:
   }
   ```
 
-2. Request - `http://localhost:3000/phone-numbers`
+2. Get all phone numbers  
+  
+  Request - `http://localhost:3000/phone-numbers`
 
   Response -
 
@@ -91,6 +95,65 @@ Open these links:
       }
     }
   }
+  ```
+  3. Get all the relationships between a particular contact and phone number
+  
+  Request - `http://localhost:3000/contacts/57461821-2819-4f77-9054-d464a014d3a2/relationships/phone-numbers`
+
+  Response -
+
+  ```
+  [
+    {
+      "session": {
+        
+      },
+      "response_hash": {
+        "start": "http:\/\/localhost:7474\/db\/data\/node\/5",
+        "data": {
+          
+        },
+        "property": "http:\/\/localhost:7474\/db\/data\/relationship\/2\/properties\/{key}",
+        "self": "http:\/\/localhost:7474\/db\/data\/relationship\/2",
+        "properties": "http:\/\/localhost:7474\/db\/data\/relationship\/2\/properties",
+        "type": "HAS_PHONE",
+        "extensions": {
+          
+        },
+        "end": "http:\/\/localhost:7474\/db\/data\/node\/6",
+        "metadata": {
+          "id": 2,
+          "type": "HAS_PHONE"
+        },
+        "id": 2
+      },
+      "rel_type": "HAS_PHONE",
+      "props": {
+        
+      },
+      "start_node_neo_id": 5,
+      "end_node_neo_id": 6,
+      "id": 2
+    }
+  ]
+  ```
+  
+  4. Get all the phone numbers of a particular contact
+  
+  Request - `http://localhost:3000/contacts/57461821-2819-4f77-9054-d464a014d3a2/phone-numbers`
+
+  Response -
+
+  ```
+  [
+    {
+      "phone_number": {
+        "name": "John Doe",
+        "phone_number": "1234567890",
+        "id": "4d18e4f5-d504-463e-a4db-a1a7abc2f90a"
+      }
+    }
+  ]
   ```
 
 ### Other ways to interact with the application
