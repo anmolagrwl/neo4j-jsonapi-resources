@@ -14,6 +14,12 @@ The instructions below were used to create this app.
 git clone https://github.com/anmolonruby/neo4j-jsonapi-resources
 ```
 
+### Run bundle install
+
+```bash
+bundle install
+```
+
 ### Run the following rake tasks
 
 ```bash
